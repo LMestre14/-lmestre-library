@@ -19,7 +19,7 @@ import {
 	ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import CreditCard from './src/components/credit-card';
+import { TravelAvatar } from './src/components/avatar';
 
 declare const global: { HermesInternal: null | {} };
 
@@ -27,8 +27,15 @@ const App = () => {
 	return (
 		<>
 			<StatusBar barStyle="dark-content" />
-			<SafeAreaView style={{ alignItems: 'center' }}>
-				<CreditCard />
+			<SafeAreaView style={{ marginHorizontal: 50, backgroundColor: 'blue', flex: 1 }}>
+				<TravelAvatar
+					image={require('./src/assets/person_1.jpg')}
+					name="Astrid Olavdottir"
+					location="Oslo, Norway"
+					friends="968"
+					countries="19"
+					photos="67"
+				/>
 				{/* <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.scrollView}>
 					<Header />
 					{global.HermesInternal == null ? null : (
